@@ -324,12 +324,13 @@ public class DistanceFilterLocationProvider extends AbstractLocationProvider imp
     }
 
     private Integer calculateDistanceFilter(Float speed) {
-        Double newDistanceFilter = (double) config.getDistanceFilter();
-        if (speed < 100) {
-            float roundedDistanceFilter = (round(speed / 5) * 5);
-            newDistanceFilter = pow(roundedDistanceFilter, 2) + (double) config.getDistanceFilter();
-        }
-        return (newDistanceFilter.intValue() < 1000) ? newDistanceFilter.intValue() : 1000;
+        // Double newDistanceFilter = (double) config.getDistanceFilter();
+        // if (speed < 100) {
+        //     float roundedDistanceFilter = (round(speed / 5) * 5);
+        //     newDistanceFilter = pow(roundedDistanceFilter, 2) + (double) config.getDistanceFilter();
+        // }
+        // return (newDistanceFilter.intValue() < 1000) ? newDistanceFilter.intValue() : 1000;
+        return 0;
     }
 
     private void startMonitoringStationaryRegion(Location location) {
